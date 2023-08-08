@@ -1,0 +1,285 @@
+<app-header></app-header>
+<section class="hero">
+<div class="overlay">
+  <h3 class="section-title">Explore</h3>
+</div>
+</section>
+<!-- Search block -->
+<section class="section">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="''" class="fw-bold text-dark">Home</a></li>
+        <li class="breadcrumb-item text-muted">Inventory</li>
+      </ol>
+    </nav>
+      <form class="search-form">
+           <div class="row">
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Make</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Model</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Condition</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Transmission</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Body</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Drive</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Fuel type</option>
+                </select>
+             </div>
+             <div class="col-md-3 mb-4">
+                <select class="form-select" >
+                  <option>Color</option>
+                </select>
+             </div>
+           </div>
+      </form>
+  </div>
+</section>
+<!-- Search block two -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+      <form class="all-search-form">
+        <div class="row">
+          <div class="col-10">
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Enter vehicle type..">
+            </div>
+          </div>
+          <div class="col-2">
+              <button class="btn">Search</button>
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-7">
+      <div class="item-count d-flex gap-4 justify-content-end">
+        <a>All (100)</a>
+        <a>New (40)</a>
+        <a>Used (40)</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h3 class="section-title">BMW</h3>
+<!--    Results header -->
+    <div class="results-header">
+    <h5 class="fw-medium">We have found 23 results for BMW</h5>
+
+      <div class="sort">
+        <form>
+           <select class="form-select" >
+            <option>Sort by</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <div class="results-list">
+      <div class="row">
+        <div class="col-md-8">
+         <a [routerLink]="'/detail'" class="explore-card">
+            <div class="row">
+            <div class="col-md-6">
+             <div class="result-thumbnail">
+                <img [src]="'assets/images/cars/bmw.jpg'" alt="bmw">
+             </div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="brand">BMW</h5>
+              <div class="d-flex gap-4">
+                <h4 class="model">Model S</h4>
+                <span>[New]</span>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="engine p-0">
+                  <h6>Engine</h6>
+                  <h5>2000cc</h5>
+                </div>
+                 <div class="fuel-type p-0">
+                  <h6>Fuel Type</h6>
+                  <h5>Electric</h5>
+                </div>
+                 <div class="transmission p-0">
+                  <h6>Transmission</h6>
+                  <h5>Automatic</h5>
+                </div>
+              </div>
+              <div class="mt-3 price-cta">
+                <h3>$12000</h3>
+                <a [routerLink]="''" class="detail-cta">Details</a>
+              </div>
+            </div>
+          </div>
+         </a>
+          <hr>
+           <a [routerLink]="'/detail'" class="explore-card">
+            <div class="row">
+            <div class="col-md-6">
+             <div class="result-thumbnail">
+                <img [src]="'assets/images/cars/bmw.jpg'" alt="bmw">
+             </div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="brand">BMW</h5>
+              <div class="d-flex gap-4">
+                <h4 class="model">Model S</h4>
+                <span>[New]</span>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="engine p-0">
+                  <h6>Engine</h6>
+                  <h5>2000cc</h5>
+                </div>
+                 <div class="fuel-type p-0">
+                  <h6>Fuel Type</h6>
+                  <h5>Electric</h5>
+                </div>
+                 <div class="transmission p-0">
+                  <h6>Transmission</h6>
+                  <h5>Automatic</h5>
+                </div>
+              </div>
+              <div class="mt-3 price-cta">
+                <h3>$12000</h3>
+                <a [routerLink]="''" class="detail-cta">Details</a>
+              </div>
+            </div>
+          </div>
+         </a>
+          <hr>
+           <a [routerLink]="'/detail'" class="explore-card">
+            <div class="row">
+            <div class="col-md-6">
+             <div class="result-thumbnail">
+                <img [src]="'assets/images/cars/bmw.jpg'" alt="bmw">
+             </div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="brand">BMW</h5>
+              <div class="d-flex gap-4">
+                <h4 class="model">Model S</h4>
+                <span>[New]</span>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="engine p-0">
+                  <h6>Engine</h6>
+                  <h5>2000cc</h5>
+                </div>
+                 <div class="fuel-type p-0">
+                  <h6>Fuel Type</h6>
+                  <h5>Electric</h5>
+                </div>
+                 <div class="transmission p-0">
+                  <h6>Transmission</h6>
+                  <h5>Automatic</h5>
+                </div>
+              </div>
+              <div class="mt-3 price-cta">
+                <h3>$12000</h3>
+                <a [routerLink]="''" class="detail-cta">Details</a>
+              </div>
+            </div>
+          </div>
+         </a>
+          <hr>
+           <a [routerLink]="'/detail'" class="explore-card">
+            <div class="row">
+            <div class="col-md-6">
+             <div class="result-thumbnail">
+                <img [src]="'assets/images/cars/bmw.jpg'" alt="bmw">
+             </div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="brand">BMW</h5>
+              <div class="d-flex gap-4">
+                <h4 class="model">Model S</h4>
+                <span>[New]</span>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="engine p-0">
+                  <h6>Engine</h6>
+                  <h5>2000cc</h5>
+                </div>
+                 <div class="fuel-type p-0">
+                  <h6>Fuel Type</h6>
+                  <h5>Electric</h5>
+                </div>
+                 <div class="transmission p-0">
+                  <h6>Transmission</h6>
+                  <h5>Automatic</h5>
+                </div>
+              </div>
+              <div class="mt-3 price-cta">
+                <h3>$12000</h3>
+                <a [routerLink]="''" class="detail-cta">Details</a>
+              </div>
+            </div>
+          </div>
+         </a>
+          <hr>
+
+          <nav class="pagination-container">
+              <div class="pagination">
+                  <button class="pagination-newer" href="#">
+                    <i class="bi bi-chevron-left"></i>
+                  </button>
+                  <span class="pagination-inner">
+                    <a href="#">1</a>
+                    <a class="pagination-active" href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                  </span>
+                  <button class="pagination-older" href="#">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+              </div>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <div class="promo-card text-center">
+              <h3 class="">Special Deal for Today</h3>
+              <h5>10% Off for New Volvo Model V6</h5>
+            <a [routerLink]="''" class="promo-cta">Details</a>
+          </div>
+
+          <div class="contact-us mt-5 text-center">
+            <h3 class="section-title">Contact Us</h3>
+            <h5 class="my-5">Need further Discussions?</h5>
+            <a [routerLink]="''" class="contact-cta">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
