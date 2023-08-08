@@ -1,0 +1,110 @@
+<div class="top-nav" [ngClass]="getHeadClass()">
+  <div class="head-content">
+   <div class="head-content-left">
+     <div class="search-container">
+       <div *ngIf="!canShowSearchAsOverlay" class="normal-search">
+         <input type="search" name="search" id="search" placeholder="Search...">
+         <i class="bi bi-search"></i>
+       </div>
+       <div *ngIf="canShowSearchAsOverlay">
+         <button [cdkMenuTriggerFor]="searchOverlay" class="search-menu-btn ripple">
+           <i class="bi bi-search"></i>
+         </button>
+       </div>
+     </div>
+   </div>
+   <div class="head-content-right">
+     <div class="head-menu">
+       <div class="head-menu-item">
+         <button class="head-menu-item-btn ripple"  (click)="toggleFullScreen()">
+           <i class="bi bi-fullscreen menu-icon" [ngClass]="{'bi-fullscreen-exit': !isFullScreen, 'bi-fullscreen': isFullScreen}"></i>
+         </button>
+       </div>
+       <div class="head-menu-item">
+         <button class="head-menu-item-btn ripple" [cdkMenuTriggerFor]="notificationOverlay">
+           <i class="bi bi-bell menu-icon"></i>
+         </button>
+       </div>
+       <div class="head-menu-item">
+         <button class="head-menu-item-btn ripple" [cdkMenuTriggerFor]="messagesOverlay">
+           <i class="bi bi-chat-right"></i>
+         </button>
+       </div>
+     </div>
+     <div class="head-user-avatar-container">
+       <div class="head-user-avatar" [cdkMenuTriggerFor]="userOverlay">
+         <img [src]="'assets/images/people/afro.jpg'" alt="user" class="avatar">
+         <div class="circle-indicator pulse"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+<ng-template #searchOverlay>
+  <div class="overlay overlay-search overlay-fall" cdkMenu>
+    <input type="search" name="search" id="" class="search" placeholder="Search...">
+    <button class="search-btn">
+      <i class="bi bi-search"></i>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #notificationOverlay>
+  <div class="overlay notification-overlay overlay-fall" cdkMenu>
+   <ul>
+     <li class="notification-head-container">
+       <div class="notification-head">Notifications</div>
+       <span class="view-all-link">
+      <a>View all</a>
+    </span>
+     </li>
+     <li class="notification-message-container" *ngFor="let notification of notifications" cdkMenuItem>
+       <i [class]="notification.icon"></i>
+       <div>
+         <div class="notification-subject">
+           {{ notification.subject }}
+         </div>
+         <p class="notification-desc">{{ notification.description }}</p>
+       </div>
+     </li>
+   </ul>
+  </div>
+</ng-template>
+
+<ng-template #messagesOverlay>
+  <div class="overlay notification-overlay overlay-fall" cdkMenu>
+    <ul class="">
+      <li class="notification-head-container">
+        <div class="notification-head">Messages</div>
+        <span class="view-all-link">
+      <a routerLink="">View all</a>
+    </span>
+      </li>
+      <li class="notification-message-container" *ngFor="let message of messages" cdkMenuItem>
+        <div class="avatar">
+          <img [src]="'assets/images/people/' + message.avatar" alt="avatar">
+        </div>
+        <div>
+          <div class="user-date-row">
+            {{ message.username }}
+           <span> {{ message.date }} </span>
+          </div>
+          <p class="notification-desc">{{ message.nugget }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+<ng-template #userOverlay>
+  <div class="overlay overlay-user overlay-fall" cdkMenu>
+    <ul>
+      <li *ngFor="let item of userItems" cdkMenuItem>
+        <a [routerLink]="item.route">
+          <i class="icon" [ngClass]="item.icon"></i>
+          <span>{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-template>

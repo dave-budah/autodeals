@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="''" >
+      <img [src]="'assets/images/logo.png'" alt="" >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item" *ngFor="let data of navData">
+          <a class="nav-link" [routerLink]="[data.routerLink]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ data.label }}</a>
+        </li>
+      </ul>
+      <div class="nav-actions d-flex gap-4 ms-lg-5">
+        <a [routerLink]="'profile'" class="avatar">
+          <img src="assets/images/placeholder.png" alt="avatar">
+        </a>
+        <a [routerLink]="'dashboard'" class="navbar-cta">Add your item</a>
+      </div>
+    </div>
+  </div>
+</nav>

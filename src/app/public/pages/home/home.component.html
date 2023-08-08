@@ -1,0 +1,474 @@
+<app-header></app-header>
+<header>
+  <div id="carouselHomeIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselHomeIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselHomeIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselHomeIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img [src]="'assets/images/cars/aston.jpg'" class="d-block w-100" alt="aston">
+      <div class="carousel-caption">
+        <h5 class="mb-1">Aston Martin</h5>
+        <h2 class="mb-4">Porsche</h2>
+        <div class="d-flex mb-5">
+          <div class="milage">
+            <h6>Milage</h6>
+            <p>0000</p>
+          </div>
+          <div class="engine">
+             <h6>Engine</h6>
+            <p>2000</p>
+          </div>
+          <div class="fuel">
+             <h6>Fuel Type</h6>
+            <p>Diesel</p>
+          </div>
+        </div>
+
+        <a [routerLink]="''" class="hero-cta">See Details</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img [src]="'assets/images/cars/benz.jpg'" class="d-block w-100" alt="benz">
+      <div class="carousel-caption">
+        <h5 class="mb-4">Mercedes Benz</h5>
+        <h2 class="mb-4">Model Sedan</h2>
+        <div class="d-flex mb-5">
+          <div class="milage">
+            <h6>Milage</h6>
+            <p>0000</p>
+          </div>
+          <div class="engine">
+             <h6>Engine</h6>
+            <p>4000</p>
+          </div>
+          <div class="fuel">
+             <h6>Fuel Type</h6>
+            <p>Petrol</p>
+          </div>
+        </div>
+
+        <a [routerLink]="''" class="hero-cta">See Details</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img [src]="'assets/images/cars/bmw.jpg'" class="d-block w-100" alt="bmw">
+      <div class="carousel-caption">
+        <h5 class="mb-4">BMW 250i</h5>
+        <h2 class="mb-4">Model Sedan</h2>
+        <div class="d-flex mb-5">
+          <div class="milage">
+            <h6>Milage</h6>
+            <p>244000</p>
+          </div>
+          <div class="engine">
+             <h6>Engine</h6>
+            <p>2000</p>
+          </div>
+          <div class="fuel">
+             <h6>Fuel Type</h6>
+            <p>Diesel</p>
+          </div>
+        </div>
+
+        <a [routerLink]="''" class="hero-cta">See Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<!-- Search section -->
+<div class="container">
+ <form class="my-5">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="mb-3">
+      <select class="form-select" >
+        <option>Select Brand</option>
+      </select>
+  </div>
+    </div>
+    <div class="col-md-5">
+       <div class="mb-3">
+      <select class="form-select" >
+        <option>Select Model</option>
+      </select>
+  </div>
+    </div>
+    <div class="col-md-2 text-end">
+      <button type="submit" class="btn search-button w-100">Search</button>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Featured Collection -->
+<section class="section my-5 py-5">
+  <div class="container">
+  <h3 class="section-title">Featured Collection</h3>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="vehicle-card">
+        <img [src]="'assets/images/cars/aston.jpg'" alt="aston martin">
+        <div class="overlay">
+          <div class="details text-start">
+            <h6>Brand Name</h6>
+            <h3>Model Name</h3>
+           <div class="d-flex gap-4">
+             <div class="milage">
+               <a>0000</a>
+             </div>
+             <div class="fuel-type">
+               <a>Petrol</a>
+             </div>
+             <div class="drive-type">
+               <a>Automatic</a>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="vehicle-card">
+        <img [src]="'assets/images/cars/aston.jpg'" alt="aston martin">
+        <div class="overlay">
+          <div class="details text-start">
+            <h6>Brand Name</h6>
+            <h3>Model Name</h3>
+           <div class="d-flex gap-4">
+             <div class="milage">
+               <a>0000</a>
+             </div>
+             <div class="fuel-type">
+               <a>Petrol</a>
+             </div>
+             <div class="drive-type">
+               <a>Automatic</a>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="vehicle-card">
+        <img [src]="'assets/images/cars/aston.jpg'" alt="aston martin">
+        <div class="overlay">
+          <div class="details text-start">
+            <h6>Brand Name</h6>
+            <h3>Model Name</h3>
+           <div class="d-flex gap-4">
+             <div class="milage">
+               <a>0000</a>
+             </div>
+             <div class="fuel-type">
+               <a>Petrol</a>
+             </div>
+             <div class="drive-type">
+               <a>Automatic</a>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="vehicle-card">
+        <img [src]="'assets/images/cars/aston.jpg'" alt="aston martin">
+        <div class="overlay">
+          <div class="details text-start">
+            <h6>Brand Name</h6>
+            <h3>Model Name</h3>
+           <div class="d-flex gap-4">
+             <div class="milage">
+               <a>0000</a>
+             </div>
+             <div class="fuel-type">
+               <a>Petrol</a>
+             </div>
+             <div class="drive-type">
+               <a>Automatic</a>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="vehicle-card">
+        <img [src]="'assets/images/cars/aston.jpg'" alt="aston martin">
+        <div class="overlay">
+          <div class="details text-start">
+            <h6>Brand Name</h6>
+            <h3>Model Name</h3>
+           <div class="d-flex gap-4">
+             <div class="milage">
+               <a>0000</a>
+             </div>
+             <div class="fuel-type">
+               <a>Petrol</a>
+             </div>
+             <div class="drive-type">
+               <a>Automatic</a>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Add Center -->
+<section class="section">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="ad-thumbnail">
+        <img [src]="'assets/images/cars/financial.jpg'" alt="financial">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="ad-content">
+        <h4>Over 10 Years Experience of Car dealership.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur expedita illo quo! Impedit, placeat.</p>
+        <a [routerLink]="''" class="ad-cta">Learn more about us</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- New Collection -->
+<!-- Why Us -->
+<section class="section why-us my-5 py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      <h4>Why Choose Us?</h4>
+      <div class="list-group list-group-flush">
+      <li class="list-group-item px-0 d-flex justify-content-between align-items-start bg-transparent border-0">
+        <span class="badge">
+          <i class="bi bi-check"></i>
+        </span>
+        <div class="ms-2 me-auto text-white">
+          <div class="fw-bold">We work with verified dealers</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing.
+        </div>
+      </li>
+      <li class="list-group-item px-0 d-flex justify-content-between align-items-start bg-transparent border-0">
+         <span class="badge">
+           <i class="bi bi-check"></i>
+         </span>
+        <div class="ms-2 me-auto text-white">
+          <div class="fw-bold">Wide range of brands in one place</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit recusandae reiciendis.
+        </div>
+      </li>
+      <li class="list-group-item px-0 d-flex justify-content-between align-items-start bg-transparent">
+        <span class="badge">
+          <i class="bi bi-check"></i>
+        </span>
+        <div class="ms-2 me-auto text-white">
+          <div class="fw-bold">Trusted by many dealers</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, ipsa!
+        </div>
+
+      </li>
+    </div>
+    </div>
+   <div class="col-md-6">
+      <div class="thumbnail">
+        <img [src]="'assets/images/light.jpg'" alt="financial">
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- Why Us -->
+<!-- New Collection -->
+<section class="section my-5 py-5">
+  <div class="container">
+    <h3 class="section-title">New Collection</h3>
+
+    <div class="row">
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+       <a [routerLink]="'/detail'" class="col-md-3">
+        <div class="collection-card">
+          <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+          <div class="details">
+            <h4>Model S500</h4>
+            <h6>Mercedes Benz</h6>
+            <h4 class="price">$21000</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Customers Feedback -->
+<!-- Why Us -->
+<section class="section my-5 py-5">
+  <div class="container">
+      <h3 class="section-title text-center">What people are saying about us?</h3>
+
+    <div class="col-md-8 mx-auto my-5">
+      <div class="testimonials">
+      <div id="carouselTestimonialControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselTestimonialControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselTestimonialControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselTestimonialControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+           <div class="testimonial">
+             <div class="row">
+               <div class="col-md-5">
+                 <div class="avatar">
+                   <img [src]="'assets/images/people/jeffery.jpg'" alt="">
+                 </div>
+               </div>
+               <div class="col-md-7">
+                 <div class="detail py-4 text-center">
+                   <h4>Jane Doe</h4>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Aspernatur cum cumque delectus dolorem dolores error explicabo
+                     harum ipsum, iusto magni minima molestiae optio quaerat quas sint
+                     tempore, voluptate. A amet animi commodi delectus facilis hic illum in nobis non saepe.</p>
+                   <div class="mt-4 d-flex gap-4 justify-content-center">
+                     <i class="bi bi-calendar-event"></i>
+                     <p>23 / 07 / 2023</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>
+          <div class="carousel-item">
+           <div class="testimonial">
+             <div class="row">
+               <div class="col-md-5">
+                 <div class="avatar">
+                   <img [src]="'assets/images/people/afro.jpg'" alt="">
+                 </div>
+               </div>
+               <div class="col-md-7">
+                 <div class="detail text-center">
+                   <h4>Mary Doe</h4>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Aspernatur cum cumque delectus dolorem dolores error explicabo
+                     harum ipsum, iusto magni minima molestiae optio quaerat quas sint
+                     tempore, voluptate. A amet animi commodi delectus facilis hic illum in nobis non saepe.</p>
+                   <div class="mt-4 d-flex gap-4 justify-content-center">
+                     <i class="bi bi-calendar-event"></i>
+                     <p>03 / 07 / 2023</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial">
+             <div class="row">
+               <div class="col-md-5">
+                 <div class="avatar">
+                   <img [src]="'assets/images/people/andre.jpg'" alt="">
+                 </div>
+               </div>
+               <div class="col-md-7">
+                 <div class="detail text-center">
+                   <h4>Andre Doe</h4>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Aspernatur cum cumque delectus dolorem dolores error explicabo
+                     harum ipsum, iusto magni minima molestiae optio quaerat quas sint
+                     tempore, voluptate. A amet animi commodi delectus facilis hic illum in nobis non saepe.</p>
+                   <div class="mt-4 d-flex gap-4 justify-content-center">
+                     <i class="bi bi-calendar-event"></i>
+                     <p>21 / 07 / 2023</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- Why Us -->
+<app-footer></app-footer>

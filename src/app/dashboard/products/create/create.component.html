@@ -1,0 +1,213 @@
+<div class="container-fluid py-4">
+            <div class="col-md-12">
+                <div class="card py-4">
+                    <div class="card-header pb-0">
+                        <div class="d-flex align-items-center">
+                            <p class="mb-0 fw-bolder text-secondary text-lg opacity-7">Add New Vehicle</p>
+                            <a [routerLink]="'/dashboard/products/new'" class="btn  bg-gradient-secondary text-white btn-sm ms-auto">All Vehicles</a>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="card-body">
+                            <div class="row">
+                               <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="vehicles-clearance-documentation" class="form-control-label">Images</label>
+                                        <input class="form-control" type="file" value="" id="vehicles-clearance-documentation">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                         <label for="make" class="form-control-label">Make | Brand</label>
+                                        <select  class="form-control"  id="make" >
+                                            <option value="Normal">Toyota</option>
+                                            <option value="High">Nissan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                    <div class="form-group">
+                                         <label for="model" class="form-control-label">Model</label>
+                                        <select  class="form-control"  id="model" >
+                                            <option value="Normal">Ultima</option>
+                                            <option value="High">Sunny</option>
+                                        </select>
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="year" class="form-control-label">Year</label>
+                                        <input class="form-control" type="date" id="year">
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                    <div class="form-group">
+                                         <label for="ew-old" class="form-control-label">State</label>
+                                        <select  class="form-control"  id="new-old" >
+                                            <option value="Normal">New</option>
+                                            <option value="High">Used</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fueltype" class="form-control-label">Fuel Type</label>
+                                        <input class="form-control" type="text" id="fueltype">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="transmission" class="form-control-label">Transmission</label>
+                                        <input class="form-control" type="text" id="transmission">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="economy" class="form-control-label">Fuel Economy</label>
+                                        <input class="form-control" type="text"  id="economy">
+                                    </div>
+                                </div>
+                               <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="millage" class="form-control-label">Millage</label>
+                                        <input class="form-control" type="number"  id="millage">
+                                    </div>
+                                </div>
+                               <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="drive" class="form-control-label">Drive</label>
+                                        <input class="form-control" type="text"  id="drive">
+                                    </div>
+                                </div>
+                               <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exteriorColor" class="form-control-label">Exterior Color</label>
+                                        <input class="form-control" type="text"  id="exteriorColor">
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="interiorColor" class="form-control-label">Interior Color</label>
+                                        <input class="form-control" type="text"  id="interiorColor">
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="engine" class="form-control-label">Engine</label>
+                                        <input class="form-control" type="text"  id="engine">
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="horsepower" class="form-control-label">Horse Power</label>
+                                        <input class="form-control" type="text"  id="horsepower">
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="description" class="form-control-label">Description</label>
+                                    <textarea class="form-control" rows="4"  id="description"></textarea>
+                                </div>
+                            </div>
+                            </div>
+                            <hr class="horizontal dark">
+                            <p class="text-uppercase text-sm">Vehicle Features</p>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="airbags">
+                                          <label class="form-check-label" for="airbags">
+                                            Airbags
+                                          </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="alloyWheel">
+                                          <label class="form-check-label" for="alloyWheel">
+                                            Alloy Wheel
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="bluetooth">
+                                          <label class="form-check-label" for="bluetooth">
+                                            Bluetooth
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="immobilizer">
+                                          <label class="form-check-label" for="immobilizer">
+                                            Immobilizer
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="mp3">
+                                          <label class="form-check-label" for="mp3">
+                                            MP3
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="navigation">
+                                          <label class="form-check-label" for="navigation">
+                                            Navigation System
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="electricSideMirror">
+                                          <label class="form-check-label" for="electricSideMirror">
+                                            Electric Side Mirror
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="parkingSensor">
+                                          <label class="form-check-label" for="parkingSensor">
+                                            Parking Sensor
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="sportPackage">
+                                          <label class="form-check-label" for="sportPackage">
+                                            Sport Package
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="streamingServices">
+                                          <label class="form-check-label" for="streamingServices">
+                                            Streaming Services
+                                          </label>
+                                    </div>
+                                </div>
+                              <div class="col-md-2">
+                                    <div class="form-group">
+                                         <input class="form-check-input me-2" type="checkbox" value="" id="superchargers">
+                                          <label class="form-check-label" for="superchargers">
+                                            Superchargers
+                                          </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="horizontal dark">
+                        </div>
+                        <div class="btns d-flex justify-content-center gap-4 mt-4">
+                            <button type="button" class="btn text-white bg-gradient-secondary btn-sm" style="width: 250px;">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>

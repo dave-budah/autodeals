@@ -1,0 +1,79 @@
+<app-header></app-header>
+<section class="hero dealers-hero">
+<div class="overlay">
+  <h3 class="section-title">Our Registered Dealers</h3>
+</div>
+</section>
+<section class="section my-5 py-5">
+  <div class="container">
+    <div class="my-2 d-flex justify-content-between">
+      <form class="search-dealer d-flex gap-4">
+          <div class="mb-3">
+              <input type="text" class="form-control" id="search">
+            </div>
+        <div class="mb-3">
+          <button class="btn">Search</button>
+        </div>
+      </form>
+
+     <div class="mb-3">
+        <select class="form-select">
+          <option>Sort by</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <a [routerLink]="'/dealer'" class="dealer-card">
+          <div class="avatar">
+            <img [src]="'assets/images/people/horse.jpeg'" alt="horse">
+          </div>
+          <div class="details py-2">
+            <h4>West Side Car Sales </h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a [routerLink]="'/dealer'" class="dealer-card">
+          <div class="avatar">
+            <img [src]="'assets/images/people/horse.jpeg'" alt="horse">
+          </div>
+          <div class="details py-2">
+            <h4>West Side Car Sales </h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a [routerLink]="'/dealer'" class="dealer-card">
+          <div class="avatar">
+            <img [src]="'assets/images/people/horse.jpeg'" alt="horse">
+          </div>
+          <div class="details py-2">
+            <h4>West Side Car Sales </h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a [routerLink]="'/dealer'" class="dealer-card">
+          <div class="avatar">
+            <img [src]="'assets/images/people/horse.jpeg'" alt="horse">
+          </div>
+          <div class="details py-2">
+            <h4>West Side Car Sales </h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a [routerLink]="'/dealer'" class="dealer-card">
+          <div class="avatar">
+            <img [src]="'assets/images/people/horse.jpeg'" alt="horse">
+          </div>
+          <div class="details py-2">
+            <h4>West Side Car Sales </h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
