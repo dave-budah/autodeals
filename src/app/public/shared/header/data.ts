@@ -3,13 +3,17 @@ export const navbarData = [
     routerLink: '/home',
     label: 'Home'
   },
+   {
+    routerLink: '/about',
+    label: 'About Us'
+  },
   {
     routerLink: '/explore',
     label: 'Explore'
   },
   {
-    routerLink: '/showroom',
-    label: 'Showroom'
+    routerLink: '/pricing',
+    label: 'Pricing'
   },
   {
     routerLink: '/dealers',
@@ -18,9 +22,5 @@ export const navbarData = [
   {
     routerLink: '/contact',
     label: 'Contact Us'
-  },
-  {
-    routerLink: '/dashboard',
-    label: 'Dashboard'
-  },
+  }
 ];

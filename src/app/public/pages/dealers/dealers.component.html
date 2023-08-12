@@ -6,7 +6,7 @@
 </section>
 <section class="section my-5 py-5">
   <div class="container">
-    <div class="my-2 d-flex justify-content-between">
+    <div class="my-2 d-flex flex-wrap justify-content-between">
       <form class="search-dealer d-flex gap-4">
           <div class="mb-3">
               <input type="text" class="form-control" id="search">
@@ -17,9 +17,11 @@
       </form>
 
      <div class="mb-3">
-        <select class="form-select">
-          <option>Sort by</option>
-        </select>
+       <form role="form" class="sorting-form">
+           <select class="form-select">
+            <option>Sort by</option>
+          </select>
+       </form>
       </div>
     </div>
     <div class="row">

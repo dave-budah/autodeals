@@ -52,7 +52,7 @@ export const userItems = [
   {
   icon: 'bi bi-person',
     label: 'Profile',
-    route: ''
+    route: '/dashboard/profile'
 },
   {
     icon: 'bi bi-gear',

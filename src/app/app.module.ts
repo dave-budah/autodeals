@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,18 @@ import {ContactComponent} from "./public/pages/contact/contact.component";
 import {DealersComponent} from "./public/pages/dealers/dealers.component";
 import { ShellComponent } from './dashboard/shell/shell.component';
 import { BodyComponent } from './dashboard/body/body.component';
-import {DashboardModule} from "./dashboard/dashboard/dashboard.module";
+import {DashboardModule} from "./dashboard/dashboard.module";
+import {provideState, provideStore, StoreModule} from '@ngrx/store';
+import {provideStoreDevtools} from '@ngrx/store-devtools';
+import {authFeatureKey, authReducer} from "./auth/store/reducers";
+import { HttpClientModule} from "@angular/common/http";
+import {provideEffects} from "@ngrx/effects";
+import * as authEffects from 'src/app/auth/store/effects';
+import { BackenderrormessagesComponent } from './auth/backenderrormessages/backenderrormessages.component'
+import {AuthModule} from "./auth/auth.module";
+import { LoadingComponent } from './shared/loading/loading.component';
+import { PricingComponent } from './public/pages/pricing/pricing.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +46,9 @@ import {DashboardModule} from "./dashboard/dashboard/dashboard.module";
     ContactComponent,
     DealersComponent,
     BodyComponent,
-    ShellComponent
+    ShellComponent,
+    LoadingComponent,
+    PricingComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,10 +56,25 @@ import {DashboardModule} from "./dashboard/dashboard/dashboard.module";
     BrowserAnimationsModule,
     NgOptimizedImage,
     DashboardModule,
+    AuthModule,
+    HttpClientModule,
+    StoreModule.forRoot({}, {}),
+
   ],
-  providers: [],
+  providers: [
+    provideStore(),
+    provideState(authFeatureKey, authReducer),
+    provideEffects(authEffects),
+    provideStoreDevtools({
+       maxAge: 25,
+      logOnly: !isDevMode(),
+      autoPause: true,
+      trace: false,
+      traceLimit: 75
+    }),
+  ],
   exports: [
-    BodyComponent
+    BodyComponent,
   ],
   bootstrap: [AppComponent]
 })

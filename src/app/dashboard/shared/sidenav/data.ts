@@ -36,4 +36,9 @@ export const navbarData: INavbarData[] = [
     icon: 'bi bi-credit-card',
     label: 'Subscription'
   },
+   {
+    routerLink: '/dashboard/pricing',
+    icon: 'bi bi-cash-coin',
+    label: 'Pricing'
+  },
 ];

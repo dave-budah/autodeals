@@ -303,7 +303,7 @@
           <div class="contact-us mt-5 text-center">
             <h3 class="section-title">Contact Us</h3>
             <h5 class="my-5">Need further Discussions?</h5>
-            <a [routerLink]="''" class="contact-cta">Details</a>
+            <a [routerLink]="''" class="contact-cta bg-gradient-danger">Details</a>
           </div>
 
 <!--          Contact Dealer -->
@@ -343,16 +343,16 @@
 <!--          Contact Dealer -->
             <div class="featured-side-list mb-4 text-center">
                <h4>Featured Cars</h4>
-              <div class="featured-side-list-item d-flex gap-4">
-              <div class="featured-thumb">
-                <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
-              </div>
-              <div class="p-0 m-0 text-start">
-                <h6 class="p-0 m-0">Benz C200</h6>
-                <h5 class="m-0 p-0">$13000</h5>
-              </div>
-            </div>
-                <div class="featured-side-list-item d-flex gap-4">
+              <a [routerLink]="'/detail'" class="featured-side-list-item d-flex gap-4">
+                <div class="featured-thumb">
+                  <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
+                </div>
+                <div class="p-0 m-0 text-start">
+                  <h6 class="p-0 m-0">Benz C200</h6>
+                  <h5 class="m-0 p-0">$13000</h5>
+                </div>
+              </a>
+                <a [routerLink]="'/detail'" class="featured-side-list-item d-flex gap-4">
                   <div class="featured-thumb">
                     <img [src]="'assets/images/cars/aston.jpg'" alt="benz">
                   </div>
@@ -360,8 +360,8 @@
                     <h6 class="p-0 m-0">Aston Martin</h6>
                     <h5 class="m-0 p-0">$22000</h5>
                   </div>
-                </div>
-                <div class="featured-side-list-item d-flex gap-4">
+                </a>
+                <a [routerLink]="'/detail'" class="featured-side-list-item d-flex gap-4">
                   <div class="featured-thumb">
                     <img [src]="'assets/images/cars/benz.jpg'" alt="benz">
                   </div>
@@ -369,7 +369,7 @@
                     <h6 class="p-0 m-0">Benz s500</h6>
                     <h5 class="m-0 p-0">$43000</h5>
                   </div>
-                </div>
+                </a>
             </div>
         </div>
       </div>
