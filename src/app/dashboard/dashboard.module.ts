@@ -11,6 +11,8 @@ import {SidenavComponent} from "./shared/sidenav/sidenav.component";
 import {TopnavComponent} from "./shared/topnav/topnav.component";
 import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from "@angular/cdk/menu";
 import { PricingComponent } from './pricing/pricing.component';
+import { RolesComponent } from './users/roles/roles.component';
+import { UserComponent } from './users/user/user.component';
 
 
 
@@ -24,6 +26,8 @@ import { PricingComponent } from './pricing/pricing.component';
     SidenavComponent,
     TopnavComponent,
     PricingComponent,
+    RolesComponent,
+    UserComponent,
   ],
   imports: [
     CommonModule,

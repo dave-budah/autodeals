@@ -1,4 +1,6 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Store} from "@ngrx/store";
+import {authActions} from "./auth/store/auth.actions";
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,10 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
-  title = 'autodeals';
+export class AppComponent implements OnInit {
+  constructor(private store: Store) {}
+
+  ngOnInit(): void {
+    this.store.dispatch(authActions.getCurrentUser())
+  }
 }

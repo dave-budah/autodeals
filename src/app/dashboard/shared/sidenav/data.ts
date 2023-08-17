@@ -9,7 +9,7 @@ export const navbarData: INavbarData[] = [
   {
     routerLink: 'dashboard/products',
     icon: 'bi bi-collection',
-    label: 'Products',
+    label: 'My Uploads',
     expanded: false,
     items: [
       {
@@ -32,10 +32,31 @@ export const navbarData: INavbarData[] = [
     label: 'Users'
   },
   {
+    routerLink: '/dashboard/roles',
+    icon: 'bi bi-person-fill-lock',
+    label: 'Roles'
+  },
+  {
     routerLink: '/dashboard/subscription',
     icon: 'bi bi-credit-card',
-    label: 'Subscription'
+    label: 'Subscriptions'
   },
+  {
+    routerLink: 'dashboard/categories',
+    icon: 'bi bi-grid',
+    label: 'Categories',
+    expanded: false,
+    items: [
+      {
+      routerLink: 'categories/makes',
+      label: 'Car Makes',
+      },
+      {
+       routerLink: 'categories/models',
+       label: 'Car Models',
+      },
+      ]
+    },
    {
     routerLink: '/dashboard/pricing',
     icon: 'bi bi-cash-coin',

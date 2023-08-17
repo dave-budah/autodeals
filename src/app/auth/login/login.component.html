@@ -1,4 +1,5 @@
-<section>
+<ng-container *ngIf="data$ | async as data">
+  <section>
       <div class="page-header min-vh-100">
         <div class="container">
           <div class="row">
@@ -9,19 +10,20 @@
                   <p class="mb-0">Enter your email and password to sign in</p>
                 </div>
                 <div class="card-body">
-                  <form role="form">
+                  <form role="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                     <backenderrormessages *ngIf="data.backendErrors" [backendErrors] = 'data.backendErrors'></backenderrormessages>
                     <div class="mb-3">
-                      <input type="email" class="form-control form-control-md" placeholder="Email" aria-label="Email">
+                      <input type="email" formControlName="email" class="form-control form-control-md" placeholder="Email" aria-label="Email">
                     </div>
                     <div class="mb-3">
-                      <input type="email" class="form-control form-control-md" placeholder="Password" aria-label="Password">
+                      <input type="password" formControlName="password"  class="form-control form-control-md" placeholder="Password" aria-label="Password">
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" id="rememberMe">
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
                     <div class="text-center">
-                      <button type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
+                      <button type="submit" [disabled]="data.isSubmitting" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
                     </div>
                   </form>
                 </div>
@@ -35,7 +37,7 @@
             </div>
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
               <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('assets/images/cars/login.jpg');
-          background-size: cover;">
+               background-size: cover;">
                 <span class="mask bg-gradient-secondary opacity-6"></span>
                 <h4 class="mt-5 text-white font-weight-bolder position-relative">"Welcome back"</h4>
                 <p class="text-white position-relative">Remember to keep your password a secrete and change as often as possible.</p>
@@ -45,3 +47,4 @@
         </div>
       </div>
     </section>
+</ng-container>

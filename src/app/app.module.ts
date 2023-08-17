@@ -21,14 +21,20 @@ import { BodyComponent } from './dashboard/body/body.component';
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {provideState, provideStore, StoreModule} from '@ngrx/store';
 import {provideStoreDevtools} from '@ngrx/store-devtools';
-import {authFeatureKey, authReducer} from "./auth/store/reducers";
-import { HttpClientModule} from "@angular/common/http";
+import {authFeatureKey, authReducer} from "./auth/store/auth.reducers";
+import * as feedEffects from './public/pages/explore/store/feed.effects';
+import {HttpClientModule, provideHttpClient, withInterceptors} from "@angular/common/http";
 import {provideEffects} from "@ngrx/effects";
-import * as authEffects from 'src/app/auth/store/effects';
-import { BackenderrormessagesComponent } from './auth/backenderrormessages/backenderrormessages.component'
+import * as authEffects from 'src/app/auth/store/auth.effects';
 import {AuthModule} from "./auth/auth.module";
 import { LoadingComponent } from './shared/loading/loading.component';
 import { PricingComponent } from './public/pages/pricing/pricing.component';
+import {InMemoryWebApiModule} from "angular-in-memory-web-api";
+import {Appdata} from "./appdata";
+import {provideRouterStore, routerReducer} from "@ngrx/router-store";
+import {AuthInterceptor} from "./shared/interceptors/authInterceptor";
+import { FeedComponent } from './public/pages/explore/feed/feed.component';
+import {feedFeatureKey, feedReducer} from "./public/pages/explore/store/feed.reducers";
 
 
 @NgModule({
@@ -49,6 +55,7 @@ import { PricingComponent } from './public/pages/pricing/pricing.component';
     ShellComponent,
     LoadingComponent,
     PricingComponent,
+    FeedComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,13 +65,21 @@ import { PricingComponent } from './public/pages/pricing/pricing.component';
     DashboardModule,
     AuthModule,
     HttpClientModule,
+    // InMemoryWebApiModule.forRoot(Appdata, {delay: 1000}),
     StoreModule.forRoot({}, {}),
 
   ],
   providers: [
-    provideStore(),
+    provideStore({
+      router: routerReducer
+    }),
+    provideHttpClient(withInterceptors([
+      AuthInterceptor
+    ])),
+    provideRouterStore(),
     provideState(authFeatureKey, authReducer),
-    provideEffects(authEffects),
+    provideState(feedFeatureKey, feedReducer),
+    provideEffects(authEffects, feedEffects),
     provideStoreDevtools({
        maxAge: 25,
       logOnly: !isDevMode(),

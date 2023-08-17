@@ -210,7 +210,22 @@ nav button.navbar-toggler {
 .main {
   min-height: 100svh;
 }
-
+/* Filter Select */
+.filter-selector {
+  width: 300px;
+}
+.badge-sm.active {
+  background: #2dce89 !important;
+  color: #fff;
+}
+.badge-sm.inactive {
+  background: #8392ab;
+  color: #fff !important;
+}
+a.view-button {
+  cursor: pointer;
+}
+/* Filter Select */
 /* Carousel Styling */
 header {
   margin-top: 4rem;
@@ -577,7 +592,7 @@ section.hero .overlay h3 {
 }
 .results-list .explore-card .result-thumbnail {
   width: 100%;
-  height: 280px;
+  height: 300px;
 }
 .results-list .explore-card .result-thumbnail img {
   width: 100%;

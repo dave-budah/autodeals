@@ -7,23 +7,31 @@
       <i class="bi bi-list"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+     <ng-container *ngIf="data$ | async as data">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item" *ngFor="let data of navData">
           <a class="nav-link" [routerLink]="[data.routerLink]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ data.label }}</a>
         </li>
-        <li class="nav-item">
+        <ng-container *ngIf="data.currentUser === null">
+           <li class="nav-item">
           <a [routerLink]="'/auth/login'" class="nav-link">Login</a>
         </li>
          <li class="nav-item">
           <a [routerLink]="'/auth/signup'" class="nav-link">Signup</a>
         </li>
+        </ng-container>
       </ul>
-      <div class="nav-actions d-flex gap-4 ms-lg-5">
-        <a [routerLink]="'/dashboard/profile'" class="avatar">
-          <img [src]="'assets/images/placeholder.png'" alt="avatar">
-        </a>
-        <a [routerLink]="'/dashboard'" class="navbar-cta bg-gradient-danger">Add your item</a>
-      </div>
+
+        <ng-container *ngIf="data.currentUser">
+           <div class="nav-actions d-flex gap-4 ms-lg-5">
+              <a [routerLink]="'/dashboard/profile'+ data.currentUser.username" class="avatar">
+                <img [src]="'assets/images/placeholder.png'" alt="avatar">
+              </a>
+             <a [routerLink]="'/dashboard/profile'+ data.currentUser.username" class="nav-link ms-0 pt-2 fw-bolder text-muted">{{ data.currentUser.username }}</a>
+              <a [routerLink]="'/dashboard'" class="navbar-cta bg-gradient-danger">Add your item</a>
+            </div>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </nav>

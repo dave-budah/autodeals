@@ -2,9 +2,9 @@ import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@an
 import {AbstractControl, FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 import {Store} from "@ngrx/store";
 import {RegisterRequestInterface} from "../models/registerRequestInterface";
-import {selectIsSubmitting, selectValidationErrors} from "../store/reducers";
+import {selectIsSubmitting, selectValidationErrors} from "../store/auth.reducers";
 import {AuthService} from "../services/auth.service";
-import {authActions} from "../store/actions";
+import {authActions} from "../store/auth.actions";
 import {combineLatest} from "rxjs";
 
 @Component({
