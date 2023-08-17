@@ -11,7 +11,7 @@ export class FeedService {
   constructor(private httpClient: HttpClient) { }
 
   getFeed(url: string): Observable<GetFeedResponseInterface> {
-    const fullUrl = environment.apiUrl + '/articles'
+    const fullUrl = environment.apiUrl + url
     return this.httpClient.get<GetFeedResponseInterface>(fullUrl)
   }
 }
