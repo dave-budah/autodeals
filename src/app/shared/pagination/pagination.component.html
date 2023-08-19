@@ -1,0 +1,9 @@
+<nav class="pagination-container">
+    <div class="pagination">
+        <span class="pagination-inner">
+          <li *ngFor="let page of pages">
+            <a [ngClass]="{active: currentPage === page}" [routerLink]="url" [queryParams]="{page: page}">{{ page }}</a>
+          </li>
+        </span>
+    </div>
+</nav>

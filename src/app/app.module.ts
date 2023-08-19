@@ -23,6 +23,7 @@ import {provideState, provideStore, StoreModule} from '@ngrx/store';
 import {provideStoreDevtools} from '@ngrx/store-devtools';
 import {authFeatureKey, authReducer} from "./auth/store/auth.reducers";
 import * as feedEffects from './public/pages/explore/store/feed.effects';
+import * as popularTagsEffect from './public/shared/populartags/store/populartags.effects';
 import {HttpClientModule, provideHttpClient, withInterceptors} from "@angular/common/http";
 import {provideEffects} from "@ngrx/effects";
 import * as authEffects from 'src/app/auth/store/auth.effects';
@@ -35,6 +36,13 @@ import {provideRouterStore, routerReducer} from "@ngrx/router-store";
 import {AuthInterceptor} from "./shared/interceptors/authInterceptor";
 import { FeedComponent } from './public/pages/explore/feed/feed.component';
 import {feedFeatureKey, feedReducer} from "./public/pages/explore/store/feed.reducers";
+import {TruncatePipe} from "./public/shared/pipes/truncate.pipe";
+import { ErrormessageComponent } from './shared/errormessage/errormessage.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
+import { TagsComponent } from './public/shared/tags/tags.component';
+import { PopulartagsComponent } from './public/shared/populartags/populartags.component';
+import {popularTagsFeatureKey, popularTagsReducer} from "./public/shared/populartags/store/populartags.reducers";
+import { FeedtogglerComponent } from './shared/feedtoggler/feedtoggler.component';
 
 
 @NgModule({
@@ -56,6 +64,12 @@ import {feedFeatureKey, feedReducer} from "./public/pages/explore/store/feed.red
     LoadingComponent,
     PricingComponent,
     FeedComponent,
+    TruncatePipe,
+    ErrormessageComponent,
+    PaginationComponent,
+    TagsComponent,
+    PopulartagsComponent,
+    FeedtogglerComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +93,8 @@ import {feedFeatureKey, feedReducer} from "./public/pages/explore/store/feed.red
     provideRouterStore(),
     provideState(authFeatureKey, authReducer),
     provideState(feedFeatureKey, feedReducer),
-    provideEffects(authEffects, feedEffects),
+    provideState(popularTagsFeatureKey, popularTagsReducer),
+    provideEffects(authEffects, feedEffects, popularTagsEffect),
     provideStoreDevtools({
        maxAge: 25,
       logOnly: !isDevMode(),

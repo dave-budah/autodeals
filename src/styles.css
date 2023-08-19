@@ -566,9 +566,15 @@ section.hero .overlay h3 {
   background: var(--secondary-color);
    color: #fff;
 }
+.item-count {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
 .item-count a {
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 12px;
   cursor: pointer;
   color: var(--gray-color) !important;
 }
@@ -694,9 +700,11 @@ section.hero .overlay h3 {
 .pagination {
   position: relative;
 }
+.pagination li {
+  display: inline-block;
+}
 .pagination a {
   position: relative;
-  display: inline-block;
   color: var(--primary-color);
   text-decoration: none;
   font-size: 1.2rem;
@@ -716,43 +724,19 @@ section.hero .overlay h3 {
   transition: all 0.2s;
 }
 .pagination a:hover,
-.pagination a .pagination-active {
+.pagination a .active {
   color: #fff;
 }
 .pagination a:hover:before,
 .pagination a .pagination-active:before {
   transform: scale(1);
 }
-.pagination .pagination-active {
+.pagination .active {
   color: #fff;
 }
-.pagination .pagination-active:before {
+.pagination .active:before {
   transform: scale(1);
 }
-.pagination-newer {
-  margin-right: 30px;
-  border-radius: 50%;
-  border: none;
-  height: 40px;
-  width: 40px;
-  display: grid;
-  place-content: center;
-}
-.pagination-older {
-  margin-left: 30px;
-  border-radius: 50%;
-  border: none;
-  height: 40px;
-  width: 40px;
-  display: grid;
-  place-content: center;
-}
-.pagination button.active,
-.pagination button:hover {
-   background-color: var(--primary-color);
-  color: #fff;
-}
-
 /* Product detail */
 .product-detail .default-img {
   width: 100%;
@@ -1768,3 +1752,16 @@ header .carousel-inner .carousel-item .carousel-caption h6 {
     text-decoration: none;
 }
 /* Pricing styling */
+/* Tags */
+a.tag-pill,
+span.tag-pill {
+  border: thin solid #afb8c9;
+  border-radius: 25px;
+  padding: 1px 5px;
+  font-weight: 400;
+}
+.tags-list-side-box {
+  border-radius: 10px;
+  border: thin solid #afb8c9;
+  min-height: 300px;
+}

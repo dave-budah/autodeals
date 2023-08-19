@@ -1,0 +1,15 @@
+<ng-container *ngIf="data$ | async as data">
+  <div class="loading-wrapper" *ngIf="data.isLoading">
+    <span class="loader"></span>
+  </div>
+  <!--  If there is an error on fetching data-->
+  <errormessage *ngIf="data.error" [message]="data.error"></errormessage>
+
+  <div class="my-5 p-2 tags-list-side-box" *ngIf="data.popularTags">
+    <h3 class="section-title text-center">Popular Tags</h3>
+
+    <div class="tag-list d-flex flex-wrap">
+      <a *ngFor="let popularTag of data.popularTags" [routerLink]="['/tags', popularTag]" class="tag-pill m-1 bg-gradient-faded-secondary text-white">{{ popularTag }}</a>
+    </div>
+  </div>
+</ng-container>

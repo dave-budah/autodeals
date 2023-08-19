@@ -1,15 +1,18 @@
+import {ProfileInterface} from "./profile.interface";
+import {PopularTagsType} from "./popularTags.type";
+
 export interface ArticleInterface {
   body: string
   title: string
   description: string
   slug: string
-  tagList: string[]
+  tagList: PopularTagsType[]
   favouritesCount: number
   favorited: boolean
   createdAt: string
   updatedAt: string
+  author: ProfileInterface
   /**
-   * TODO: Add author interface
    * TODO: Add thumbnail
    */
 

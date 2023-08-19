@@ -1,0 +1,10 @@
+<div class="item-count">
+<ng-container *ngIf="currentUser$ | async">
+  <a [routerLink]="'/explore'" class="nav-link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Your Feed</a>
+</ng-container>
+<a [routerLink]="'/explore'" class="nav-link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">All Vehicles</a>
+
+<ng-container *ngIf="tagName">
+  <a [routerLink]="['/tags', tagName]" class="nav-link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><i class="bi bi-hash"></i>{{ tagName }}</a>
+</ng-container>
+</div>

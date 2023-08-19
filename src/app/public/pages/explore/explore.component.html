@@ -79,11 +79,8 @@
       </form>
     </div>
     <div class="col-md-7">
-      <div class="item-count d-flex gap-4 justify-content-end">
-        <a>All (100)</a>
-        <a>New (40)</a>
-        <a>Used (40)</a>
-      </div>
+<!--      Toggle feed -->
+        <feedtoggler></feedtoggler>
     </div>
     </div>
   </div>
@@ -108,7 +105,7 @@
       <div class="row">
 <!--        Main column -->
         <div class="col-md-9">
-         <feed [apiUrl]="'apiUrl'"></feed>
+         <feed [apiUrl]="apiUrl"></feed>
         </div>
 
 <!--        Side column -->
@@ -124,6 +121,7 @@
             <h5 class="my-5">Need further Discussions?</h5>
             <a [routerLink]="''" class="contact-cta bg-gradient-danger">Details</a>
           </div>
+          <populartags></populartags>
         </div>
       </div>
     </div>
